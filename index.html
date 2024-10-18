@@ -3,24 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlashyFlicksAndPics - Photography</title>
+    <meta name="description" content="FlashyFlicksAndPics - Photography by Shubrangshu Giri">
+    <title>FlashyFlicksAndPics</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>FlashyFlicksAndPics</h1>
-        <p>Capturing the beauty of the world through my lens.</p>
+        <div class="container">
+            <h1>FlashyFlicksAndPics</h1>
+            <p>Capturing moments, one click at a time</p>
+        </div>
     </header>
-    <section id="gallery">
-        <h2>My Photography</h2>
-        <div class="photo-grid">
-            <img src="images/photo1.jpg" alt="Photography Sample 1">
-            <img src="images/photo2.jpg" alt="Photography Sample 2">
-            <img src="images/photo3.jpg" alt="Photography Sample 3">
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I'm Shubrangshu Giri, a passionate photographer with a love for natural beauty, portraits, and capturing life’s special moments. Welcome to my photography page!</p>
         </div>
     </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="photo-grid">
+                <div class="photo">
+                    <img src="images/photo1.jpg" alt="Photography 1" onclick="openLightbox();showImage(1)">
+                </div>
+                <div class="photo">
+                    <img src="images/photo2.jpg" alt="Photography 2" onclick="openLightbox();showImage(2)">
+                </div>
+                <div class="photo">
+                    <img src="images/photo3.jpg" alt="Photography 3" onclick="openLightbox();showImage(3)">
+                </div>
+                <!-- Add more photos as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2024 FlashyFlicksAndPics by Shubrangshu Giri</p>
+        <p>© 2024 FlashyFlicksAndPics by Shubrangshu Giri | Follow me on Instagram!</p>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="caption" id="caption"></div>
+    </div>
 </body>
 </html>
