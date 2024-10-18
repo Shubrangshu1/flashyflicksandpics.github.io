@@ -11,9 +11,9 @@ function closeLightbox() {
 // Display Image in Lightbox
 function showImage(index) {
     const images = [
-        'images/photo1.jpg',
-        'images/photo2.jpg',
-        'images/photo3.jpg'
+        'wallpaper1.jpg',
+        'wallpaper2.jpg',
+        'wallpaper3.jpg'
     ];
     const captions = [
         'Photography 1 Caption',
